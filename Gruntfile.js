@@ -16,7 +16,9 @@ module.exports = function (grunt) {
   // Load grunt tasks automatically
   require('load-grunt-tasks')(grunt);
 
-  // Configurable paths
+  grunt.loadNpmTasks('grunt-gh-pages');
+  
+// Configurable paths
   var config = {
     app: 'app',
     dist: 'dist'
@@ -27,6 +29,14 @@ module.exports = function (grunt) {
 
     // Project settings
     config: config,
+    
+    //deploy to gh-pages
+    'gh-pages': {
+      options: {
+        base: 'dist'
+      },
+      src: ['**']
+    },
 
     // Watches files for changes and runs tasks based on the changed files
     watch: {
@@ -322,8 +332,8 @@ module.exports = function (grunt) {
         'svgmin'
       ]
     }
-  });
 
+  });
 
   grunt.registerTask('serve', 'start the server and preview your app, --allow-remote for remote access', function (target) {
     if (grunt.option('allow-remote')) {
@@ -381,6 +391,10 @@ module.exports = function (grunt) {
   grunt.registerTask('default', [
     'newer:jshint',
     'test',
+    'build'
+  ]);
+
+  grunt.registerTask('gh-pages', [
     'build'
   ]);
 };
