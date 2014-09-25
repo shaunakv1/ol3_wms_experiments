@@ -46,11 +46,11 @@ function getSLD() {
    				'<Rule>'+
    					'<RasterSymbolizer>'+
    						'<ColorMap type="intervals">'+
-   							//'<ColorMapEntry color="#FFFFFF" opacity="0" quantity="-50"/>'+
-   							//'<ColorMapEntry color="#FFFFFF" opacity="0" quantity="1"/>'+
-   							'<ColorMapEntry color="#0066FF" quantity="10"/>'+
-   							'<ColorMapEntry color="#FFFFFF" quantity="10"/>'+
-   							// '<ColorMapEntry color="#FFFFFF" opacity="0" quantity="256"/>'+
+   							'<ColorMapEntry color="#EEBE2F" quantity="-50" opacity="0"/>'+
+   							'<ColorMapEntry color="#0066FF" quantity="0" opacity="1"/>'+
+   							'<ColorMapEntry color="#0066FF" quantity="20" opacity="1" />'+
+   							'<ColorMapEntry color="#FFFFFF" quantity="100" opacity="0" />'+
+
    						'</ColorMap>'+
    					'</RasterSymbolizer>'+
    				'</Rule>'+
