@@ -45,10 +45,10 @@ function getSLD() {
    			'<FeatureTypeStyle>'+
    				'<Rule>'+
    					'<RasterSymbolizer>'+
-   						'<ColorMap type="intervals">'+
+   						'<ColorMap type="ramp">'+
    							'<ColorMapEntry color="#EEBE2F" quantity="-50" opacity="0"/>'+
    							'<ColorMapEntry color="#0066FF" quantity="0" opacity="1"/>'+
-   							'<ColorMapEntry color="#0066FF" quantity="20" opacity="1" />'+
+   							'<ColorMapEntry color="#A5ECEF" quantity="20" opacity="0" />'+
    							'<ColorMapEntry color="#FFFFFF" quantity="100" opacity="0" />'+
 
    						'</ColorMap>'+
