@@ -1,0 +1,59 @@
+<sld:UserStyle xmlns="http://www.opengis.net/sld" xmlns:sld="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:gml="http://www.opengis.net/gml">
+  <sld:Name>Default Styler</sld:Name>
+  <sld:Title/>
+  <sld:FeatureTypeStyle>
+    <sld:Name>name</sld:Name>
+    <sld:FeatureTypeName>Feature</sld:FeatureTypeName>
+    <sld:Rule>
+      <sld:Name>NAMEColors for value-ranges</sld:Name>
+      <sld:Title>TITLEColors for value-ranges</sld:Title>
+      <sld:MaxScaleDenominator>1.0E20</sld:MaxScaleDenominator>
+      <sld:RasterSymbolizer>
+        <sld:Geometry>
+          <ogc:PropertyName>geom</ogc:PropertyName>
+        </sld:Geometry>
+        <sld:ChannelSelection>
+          <sld:GrayChannel>
+            <sld:SourceChannelName>1</sld:SourceChannelName>
+          </sld:GrayChannel>
+        </sld:ChannelSelection>
+        <sld:ColorMap type="ramp">
+          <sld:ColorMapEntry color="#FFFFFF" opacity="0.0" quantity="-16.478411" label="[-16.48 - -5.28["/>
+          <sld:ColorMapEntry color="#FFFCFF" opacity="1.0" quantity="-5.278577" label="[-5.28 - 7.32["/>
+          <sld:ColorMapEntry color="#FFCFFF" opacity="1.0" quantity="7.321236" label="[7.32 - 18.52["/>
+          <sld:ColorMapEntry color="#FF9EFF" opacity="1.0" quantity="18.52107" label="[18.52 - 28.32["/>
+          <sld:ColorMapEntry color="#FF70FF" opacity="1.0" quantity="28.320925" label="[28.32 - 38.12["/>
+          <sld:ColorMapEntry color="#FF33FF" opacity="1.0" quantity="38.12078" label="[38.12 - 47.92["/>
+          <sld:ColorMapEntry color="#E600FF" opacity="1.0" quantity="47.920634" label="[47.92 - 59.12["/>
+          <sld:ColorMapEntry color="#B700FF" opacity="1.0" quantity="59.120468" label="[59.12 - 70.32["/>
+          <sld:ColorMapEntry color="#8800FF" opacity="1.0" quantity="70.320302" label="[70.32 - 81.52["/>
+          <sld:ColorMapEntry color="#5500FF" opacity="1.0" quantity="81.520136" label="[81.52 - 92.72["/>
+          <sld:ColorMapEntry color="#0D11FF" opacity="1.0" quantity="92.71997" label="[92.72 - 103.92["/>
+          <sld:ColorMapEntry color="#304CFF" opacity="1.0" quantity="103.919804" label="[103.92 - 115.12["/>
+          <sld:ColorMapEntry color="#3B7FFF" opacity="1.0" quantity="115.119638" label="[115.12 - 126.32["/>
+          <sld:ColorMapEntry color="#38B6FF" opacity="1.0" quantity="126.319472" label="[126.32 - 136.12["/>
+          <sld:ColorMapEntry color="#1CF0FF" opacity="1.0" quantity="136.119327" label="[136.12 - 145.92["/>
+          <sld:ColorMapEntry color="#24FFDA" opacity="1.0" quantity="145.919182" label="[145.92 - 157.12["/>
+          <sld:ColorMapEntry color="#2EFFA4" opacity="1.0" quantity="157.119015" label="[157.12 - 168.32["/>
+          <sld:ColorMapEntry color="#2EFF74" opacity="1.0" quantity="168.318849" label="[168.32 - 179.52["/>
+          <sld:ColorMapEntry color="#21FF3F" opacity="1.0" quantity="179.518683" label="[179.52 - 190.72["/>
+          <sld:ColorMapEntry color="#26FF00" opacity="1.0" quantity="190.718517" label="[190.72 - 201.92["/>
+          <sld:ColorMapEntry color="#6AFF00" opacity="1.0" quantity="201.918351" label="[201.92 - 213.12["/>
+          <sld:ColorMapEntry color="#9DFF00" opacity="1.0" quantity="213.118185" label="[213.12 - 224.32["/>
+          <sld:ColorMapEntry color="#CCFF00" opacity="1.0" quantity="224.318019" label="[224.32 - 235.52["/>
+          <sld:ColorMapEntry color="#FBFF00" opacity="1.0" quantity="235.517853" label="[235.52 - 246.72["/>
+          <sld:ColorMapEntry color="#FFE500" opacity="1.0" quantity="246.717687" label="[246.72 - 256.52["/>
+          <sld:ColorMapEntry color="#FFC800" opacity="1.0" quantity="256.517542" label="[256.52 - 267.72["/>
+          <sld:ColorMapEntry color="#FFAE00" opacity="1.0" quantity="267.717376" label="[267.72 - 278.92["/>
+          <sld:ColorMapEntry color="#FF9100" opacity="1.0" quantity="278.91721" label="[278.92 - 290.12["/>
+          <sld:ColorMapEntry color="#F57600" opacity="1.0" quantity="290.117044" label="[290.12 - 299.92["/>
+          <sld:ColorMapEntry color="#D45800" opacity="1.0" quantity="299.916898" label="[299.92 - 309.72["/>
+          <sld:ColorMapEntry color="#B84000" opacity="1.0" quantity="309.716753" label="[309.72 - 318.12["/>
+          <sld:ColorMapEntry color="#9C2400" opacity="1.0" quantity="318.116628" label="[318.12 - 339.12]"/>
+          <sld:ColorMapEntry color="#800600" opacity="1.0" quantity="339.116317" label=""/>
+          <sld:ColorMapEntry color="#800600" opacity="1.0" quantity="339.116317" label=""/>
+        </sld:ColorMap>
+      </sld:RasterSymbolizer>
+    </sld:Rule>
+  </sld:FeatureTypeStyle>
+</sld:UserStyle>

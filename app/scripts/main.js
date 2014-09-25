@@ -18,7 +18,9 @@ $(function () {
 	            params: {
 	                'LAYERS': 'cite:lidar_wsg841',
 	                'TILED': true,
-	                //'sld':getSLD('cite:lidar_wsg841',20)
+	                'SLD_BODY':getSLD('cite:lidar_wsg841',50),
+	                'SERVICE':'WMS',
+					'VERSION':'1.1.1'
 	            },
 	            serverType: 'geoserver'
 	        }))
@@ -34,7 +36,28 @@ $(function () {
 	});
 });
 
-function getSLD(layer,sensorReading) {
-   var sld = '<StyledLayerDescriptor version="1.0.0" xsi:schemaLocation="http://www.opengis.net/sld StyledLayerDescriptor.xsd" xmlns="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> <NamedLayer> <Name>'+layer+'</Name> <UserStyle> <Title>SLD Cook Book: Many color gradient</Title> <FeatureTypeStyle> <Rule> <RasterSymbolizer> <ColorMap type="intervals"> <ColorMapEntry color="#FFFFFF" quantity="-50" opacity="0" /> <ColorMapEntry color="#FFFFFF" quantity="1" opacity="0" /> <ColorMapEntry color="#0066FF" quantity="'+sensorReading+'" /> <ColorMapEntry color="#FFFFFF" quantity="256" opacity="0" /> </ColorMap> </RasterSymbolizer> </Rule> </FeatureTypeStyle> </UserStyle> </NamedLayer> </StyledLayerDescriptor>';
+function getSLD() {
+   var sld = '<StyledLayerDescriptor version="1.0.0" xmlns="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sld StyledLayerDescriptor.xsd">'+
+   	'<NamedLayer>'+
+   		'<Name>cite:lidar_wsg841</Name>'+
+   		'<UserStyle>'+
+   			'<Title>SLD Cook Book: Many color gradient</Title>'+
+   			'<FeatureTypeStyle>'+
+   				'<Rule>'+
+   					'<RasterSymbolizer>'+
+   						'<ColorMap type="intervals">'+
+   							//'<ColorMapEntry color="#FFFFFF" opacity="0" quantity="-50"/>'+
+   							//'<ColorMapEntry color="#FFFFFF" opacity="0" quantity="1"/>'+
+   							'<ColorMapEntry color="#0066FF" quantity="10"/>'+
+   							'<ColorMapEntry color="#FFFFFF" quantity="10"/>'+
+   							// '<ColorMapEntry color="#FFFFFF" opacity="0" quantity="256"/>'+
+   						'</ColorMap>'+
+   					'</RasterSymbolizer>'+
+   				'</Rule>'+
+   			'</FeatureTypeStyle>'+
+   		'</UserStyle>'+
+   	'</NamedLayer>'+
+   '</StyledLayerDescriptor>';
+
    return sld;
 }
