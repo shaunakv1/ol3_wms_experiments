@@ -10,7 +10,8 @@ $(function () {
 	                'TILED': true,
 	                'SLD_BODY':renderStyle(50),
 	                'SERVICE':'WMS',
-					'VERSION':'1.1.1'
+					'VERSION':'1.1.1',
+					'FORMAT':'image/png8'
 	            }, 	
 	            serverType: 'geoserver'
 	        }));
@@ -76,7 +77,7 @@ $(function () {
 
 
 	// UI controls
-	$('#waterlevel').on('change mousemove', function() {
+	$('#waterlevel').on('change', function() {
 	    $('#currentLevel').html($(this).val() + ' ft');
 	    wmsSource.updateParams({
 	    	'SLD_BODY':renderStyle($(this).val())
@@ -94,15 +95,17 @@ function renderStyle(waterLevel) {
    			'<FeatureTypeStyle>'+
    				'<Rule>'+
    					'<RasterSymbolizer>'+
-   						'<ColorMap type="ramp">'+
-   							'<ColorMapEntry color="#EEBE2F" quantity="-50" opacity="0"/>'+
-   							'<ColorMapEntry color="#0066FF" quantity="0" opacity="1"/>'+
-   							'<ColorMapEntry color="#A5ECEF" quantity="'+waterLevel+'" opacity="0" />'+
+   						'<ColorMap type="intervals">'+
    							
-   							// for solid color rendndering.. also change color ramp type to 'intervals'
+   							// for ramped color rendndering.. also change color intervals type to 'ramp'
 							// '<ColorMapEntry color="#EEBE2F" quantity="-50" opacity="0"/>'+
    							// '<ColorMapEntry color="#0066FF" quantity="0" opacity="1"/>'+
-   							// '<ColorMapEntry color="#0066FF" quantity="'+waterLevel+'" opacity="1" />'+
+   							// '<ColorMapEntry color="#A5ECEF" quantity="'+waterLevel+'" opacity="0" />'+
+   							
+   							// for solid color rendndering.. also change color ramp type to 'intervals'
+							'<ColorMapEntry color="#EEBE2F" quantity="-50" opacity="0"/>'+
+   							'<ColorMapEntry color="#0066FF" quantity="0" opacity="1"/>'+
+   							'<ColorMapEntry color="#0066FF" quantity="'+waterLevel+'" opacity="1" />'+
 
    						'</ColorMap>'+
    					'</RasterSymbolizer>'+
