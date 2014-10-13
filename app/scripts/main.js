@@ -11,7 +11,7 @@ $(function () {
 	                'SLD_BODY':renderStyle(50),
 	                'SERVICE':'WMS',
 					'VERSION':'1.1.1'
-	            },
+	            }, 	
 	            serverType: 'geoserver'
 	        }));
 	
